@@ -102,13 +102,15 @@ var getRandomArbitrary = function() {
 };
 var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 //Above you're given a function that will return a random number between 0 and 30, and an array full of numbers. Your job is to write a function named finder that will get a random number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
-
+var randomNum = getRandomArbitrary();
 function finder(numbers) {
   for (var i = 0; i < numbers.length; i ++) {
-    if (getRandomArbitrary === numbers[i]) {
+    if (randomNum === numbers[i]) {
       return true;
     }
-    else return false;
+    else if (randomNum !== numbers[i]) {
+      return false;
+    }
   }
 }
 
@@ -151,11 +153,14 @@ function removeItem(list, item){
   }
   return list;
 }
+removeItem(myGroceryList, 'chips');
 
 function addItem(list, item) {
   list.push(item);
   return list;
 }
+addItem(myGroceryList, 'Jerky');
+
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
@@ -170,7 +175,7 @@ function addItem(list, item) {
 function maker(){
   var arr = [];
   for (var i = 1; i <= 215; i++){
-    arr.push(i)
+    arr.push(i);
   }
   return arr;
 }
@@ -187,8 +192,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 function addTen(numbers) {
   var newNumbers = [];
   for (var i = 0; i < numbers.length; i++) {
-    var nums = numbers[i] + 10;
-    newNumbers.push(nums);
+    newNumbers.push(numbers[i] + 10);
   }
   return newNumbers;
 }
