@@ -139,7 +139,7 @@ describe('arraysPractice', function () {
 			expect(removeItem).toEqual(jasmine.any(Function));
 		})
 		it('should return an array', function () {
-			expect(removeItem()).toEqual(jasmine.any(Array));
+			expect(removeItem([])).toEqual(jasmine.any(Array));
 		})
 		it('should remove an item from a groceryList array (if it is in the array)', function () {
 			var groceryList = ['chips', 'soda', 'celery', 'pizza'];
@@ -165,7 +165,7 @@ describe('arraysPractice', function () {
 			expect(addItem).toEqual(jasmine.any(Function));
 		})
 		it('should return an array', function () {
-			expect(addItem()).toEqual(jasmine.any(Array));
+			expect(addItem([])).toEqual(jasmine.any(Array));
 		})
 		it('should add an item to an array', function () {
 			var groceryList = [];
@@ -209,7 +209,7 @@ describe('arraysPractice', function () {
 			//could be passed numbers as numbers or strings
 			var arr = [1, '2', 3];
 			var expected = [11, 12, 13];
-			expect(addTen(arr)).toEqual(expected);	
+			expect(addTen(arr)).toEqual(expected);
 		})
 	})
 	describe('longer', function () {
